@@ -15,16 +15,27 @@ public class PracticeFormPage {
         nameSpace.click();
         nameSpace.sendKeys(nameText);
     }
+    public String getName(){
+        WebElement nameSpcae=driver.findElement(name);
+        return nameSpcae.getAttribute("value");
+    }
 
     public void setLastName(String lastNameText){
         WebElement lastNameSpace=driver.findElement(lastName);
         lastNameSpace.click();
         lastNameSpace.sendKeys(lastNameText);
     }
-
+    public String getLastName(){
+        WebElement lastNameSpcae=driver.findElement(lastName);
+        return lastNameSpcae.getAttribute("value");
+    }
     public void setEmail(String emailText){
         WebElement emailSpace=driver.findElement(email);
         emailSpace.click();
         emailSpace.sendKeys(emailText);
+    }
+    public String getEmail(){
+        WebElement emailSpcae=driver.findElement(email);
+        return emailSpcae.getAttribute("value");
     }
 }
