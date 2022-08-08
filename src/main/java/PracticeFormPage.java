@@ -7,8 +7,14 @@ public class PracticeFormPage {
     private final By name= By.id("firstName");
     private final By lastName= By.id("lastName");
     private final By email= By.id("userEmail");
+    private GenderSection genderSection;
     public  PracticeFormPage(WebDriver driver){
+
         this.driver=driver;
+        genderSection=new GenderSection(driver);
+    }
+    public GenderSection genderSection(){
+        return this.genderSection;
     }
     public void setName(String nameText){
         WebElement nameSpace=driver.findElement(name);

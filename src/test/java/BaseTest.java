@@ -19,7 +19,7 @@ public  class BaseTest {
     }
     @AfterAll
     public  void tearDown(){
-        driver.close();
+        //driver.close();
         System.out.println("Test Finished");
     }
 }
